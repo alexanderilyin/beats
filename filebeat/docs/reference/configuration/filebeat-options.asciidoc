@@ -180,6 +180,11 @@ This setting is especially useful for multiline log messages, which can get larg
 [[multiline]]
 ===== multiline
 
+NOTE: `pattern` is not compatible with format used in `logstash`. See <<regexp-support>> for details or you will face with errors like: `ERR Stop Harvesting. Unexpected encoding line reader error: error parsing regexp: invalid escape sequence: '\d'`
+
+==================================================
+
+
 Options that control how Filebeat deals with log messages that span multiple lines. Multiline messages are common in files that contain Java stack traces.
 
 The following example shows how to configure Filebeat to handle a multiline message where the first line of the message begins with a bracket (`[`).
